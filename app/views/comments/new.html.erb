@@ -1,0 +1,5 @@
+<%= form_for ([@user, @comment]) do |c| %>
+<%= c.label :description ,"Comments" %>
+<%= c.text_field :comment %>
+<%= c.submit "add comment" %>
+<% end %>

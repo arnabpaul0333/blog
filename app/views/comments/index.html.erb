@@ -1,0 +1,4 @@
+<% @comments.each do |comment| %>
+<p><%= @comment.comment%>
+<%= link_to "edit user",edit_user_comment_path(@user,@comment) %></p>
+<% end%>

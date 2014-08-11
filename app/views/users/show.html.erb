@@ -1,0 +1,9 @@
+<h1>User Details</h1>
+<table>
+<tr>
+<td><%= @user.first_name %></td>
+<td><%= @user.email%></td>
+</tr>
+</table>
+<%= link_to "edit user",edit_user_path(@user) %>
+<%= link_to "add comments",new_user_comment_path(@user) %>
