@@ -1,7 +1,9 @@
-<%= form_for @user do|u| %>
+<h1><center>Account Details</center> </h1>
+<center><%= form_for @user, :url => users_path, :html => { :multipart =>true} do|u| %>
 <%= u.label :firstname ,"name"%>  
 <%= u.text_field :first_name %><br>
 <%= u.label :email ,"email"%>  
 <%= u.email_field :email %><br>
-<%= u.submit "submit"%>
+<%= u.file_field :photo %><br>
+<%= u.submit "submit"%></center>
 <% end%>

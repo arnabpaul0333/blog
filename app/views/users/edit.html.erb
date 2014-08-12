@@ -1,8 +1,9 @@
-<%= form_for @user do|u| %>
+<%= form_for @user, :url=>user_path,:method => "patch", :html=>{ :multipart =>true} do|u| %>
 <%= u.label :firstname,"name"%> 
 <%= u.text_field :first_name %><br>
 <%= u.label :email,"email"%>  
 <%= u.email_field :email %><br>
+<%= u.file_field :photo %><br>
 <%= u.submit %>
 <%= link_to "all users",users_path(@user) %>
 <% end%>

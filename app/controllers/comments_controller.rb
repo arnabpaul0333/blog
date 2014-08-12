@@ -1,26 +1,31 @@
 class CommentsController < ApplicationController
 
   def new
-    @user= User.find(params[:user_id])
-    @comment= @user.comments.new
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.new
   end
 
   def create
-   user=User.find(params[:user_id])
-    comment=user.comments.create(comments_params)
+   user = User.find(params[:user_id])
+    comment = user.comments.create(comments_params)
     redirect_to user_comment_path(user, comment)
   end
 
   def show
-    @user=User.find(params[:user_id])
-    @comment=@user.comments.find(params[:id])
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.find(params[:id])
   end
 
   def edit
-    @user=User.find(params[:user_id])
-    @comment=@user.comments.find(params[:id])
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.find(params[:id])
   end
-
+  def destroy
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.find(params[:id])
+    @comment.destroy
+    redirect_to user_comments_path(@user)
+  end
   def update
     user=User.find(params[:user_id])
     comment=user.comments.find(params[:id])

@@ -1,5 +1,6 @@
-<% @user.comments.each do |comment| %>
-<p><%= comment.comment %>
+<% @user.comments.each do |com| %>
+<p><%= com.comment %>
+  <%= link_to "destroy comment", user_comment_path(@user, com) , method: :delete %>
 </p>
 <% end %>
 
