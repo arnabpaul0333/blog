@@ -1,4 +1,15 @@
 <%= form_for ([@user, @comment]) do |c| %>
+<% if @comment.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
+    this article from being saved:</h2>
+  <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 <%= c.label :description ,"Comments" %>
 <%= c.text_field :comment %>
 <%= c.submit "add comment" %>

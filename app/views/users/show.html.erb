@@ -1,8 +1,7 @@
 <h1>User Details</h1>
-
 <%= @user.first_name %><br>
-<%= @user.email%><br>
-<%= image_tag @user.photo.url(:medium)  %><br>
+<%= @user.email %><br>
+<%= image_tag @user.photo.url(:medium) %><br>
 <%= link_to "edit user",edit_user_path(@user) %>
 <%= link_to "add comments",new_user_comment_path(@user) %>
 <%= link_to "log out", new_user_path(@user) %>
