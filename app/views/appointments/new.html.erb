@@ -1,0 +1,5 @@
+<%= form_for ([@physician, @appointment]),url: physician_appointments_path , method: "post" do |c| %>
+<%= c.label :description , "Appointment type" %>
+<%= c.text_field :appointment_type %>
+<%= c.submit "add submit" %>
+<% end %>

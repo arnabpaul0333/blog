@@ -1,5 +1,0 @@
-<h1>Physicians Details</h1>
-<%= @physician.name %><br>
-<%= @physician.address %><br>
-<%= link_to "edit profile",edit_physician_path(@physician) %><br>
-<%= link_to "log out",new_physician_path(@physician) %>

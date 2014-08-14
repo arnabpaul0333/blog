@@ -1,8 +1,6 @@
 Lab::Application.routes.draw do
-resources :physician do
+resources :physician , :patients do
 resources :appointments
-resources :patients 
-
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

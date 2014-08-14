@@ -1,4 +1,4 @@
-<%= form_for @physician, :url => physician_index_path, :method => "post"  do |c| %>
+<%= form_for @physician, url: physician_index_path, method: "post"  do |c| %>
 <%= c.label :name , "Name" %>
 <%= c.text_field :name %><br>
 <%= c.label :address , "Address" %>

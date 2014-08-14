@@ -1,0 +1,7 @@
+<%= form_for @patient, url: patients_path, method:"post" do |c| %>
+<%= c.label :name , "Name" %>
+<%= c.text_field :name %><br>
+<%= c.label:address , "Address" %>
+<%= c.text_field :address %><br>
+<%= c.submit "submit" %>
+<% end %>

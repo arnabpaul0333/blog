@@ -1,0 +1,5 @@
+<h1>Patients Details</h1>
+<%= @patient.name %><br>
+<%= @patient.address %><br>
+<%= link_to "edit profile",edit_patient_path(@patient) %><br>
+<%= link_to "log out user", new_patient_path(@patient) %>

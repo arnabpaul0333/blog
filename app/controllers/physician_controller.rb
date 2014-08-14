@@ -18,7 +18,7 @@ class PhysicianController < ApplicationController
   end
   
   def update
-    physician = Physician.find[:id])
+    physician = Physician.find(params[:id])
     physician.update_attributes(physician_params)
     redirect_to physician_path(@physician)
   end
