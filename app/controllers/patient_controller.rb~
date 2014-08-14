@@ -1,0 +1,9 @@
+class PatientController < ApplicationController
+
+  def new
+    @patient = Patient.new
+  end
+ 
+  def create
+    @patient = Patient.create(patient_params)
+    redirect_to 
